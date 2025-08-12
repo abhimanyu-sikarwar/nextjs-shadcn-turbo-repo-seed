@@ -1,0 +1,36 @@
+{
+  "name": "seed-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "scraper": "turbo scraper",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "deploy:prod": "pnpm build && pm2 start ecosystem.config.js --env prod"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "autoprefixer": "^10.4.21",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.11",
+    "turbo": "^2.5.5",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@10.14.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "*",
+        "react-dom": "*"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
