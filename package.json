@@ -20,7 +20,6 @@
     "turbo": "^2.5.5",
     "typescript": "5.9.2"
   },
-  "dependencies": {},
   "packageManager": "pnpm@10.14.0",
   "pnpm": {
     "peerDependencyRules": {
@@ -28,7 +27,13 @@
         "react": "*",
         "react-dom": "*"
       }
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
   },
   "engines": {
     "node": ">=20"
